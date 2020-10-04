@@ -1,0 +1,29 @@
+<fieldset data-controller="decrypt" class="mb-5">
+  <legend>Decrypt a message</legend>
+  <div class="row">
+    <div class="col-md-6">
+        <label>Text to decrypt</label>
+        <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="decrypt.input"></div>
+    </div>
+    <div class="col-md-6">
+        <label>Your PGP private key</label>
+        <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="decrypt.key"></div>
+    </div>
+  </div>
+  <button data-action="click->decrypt#decrypt" data-target="decrypt.decryptButton" type="button" class="btn btn-primary btn-lg">
+    <span class="mr-3">Decrypt</span>
+    <span class="material-icons">lock_open</span>
+    <span class="material-icons spin d-none">hourglass_empty</span>
+  </button>
+  <br>
+  <br>
+  <br>
+  <div class="row d-none" data-target="decrypt.initialState">
+    <div class="col">
+      <label>Your decrypted message</label>
+      <span class="material-icons md-light copy" data-action="click->decrypt#copyToClipboard">content_copy</span>
+      <span class="copy-badge badge badge-light d-none">Copied!</span>
+      <div class="custom-textarea output" spellcheck="false" contentEditable="true" data-target="decrypt.output"></div>
+    </div>
+  </div>
+</fieldset>

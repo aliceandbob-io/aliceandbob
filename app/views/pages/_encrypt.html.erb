@@ -1,0 +1,29 @@
+<fieldset data-controller="encrypt" class="mb-5">
+  <legend>Encrypt a message</legend>
+  <div class="row">
+    <div class="col-md-6">
+      <label>Text to encrypt</label>
+      <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.input"></div>
+    </div>
+    <div class="col-md-6">
+      <label>Public PGP key of the receiver</label>
+      <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.key"></div>
+    </div>
+  </div>
+  <button data-action="click->encrypt#encrypt" data-target="encrypt.encryptButton" type="button" class="btn btn-primary btn-lg">
+    <span class="mr-3">Encrypt</span>
+    <span class="material-icons">lock</span>
+    <span class="material-icons spin d-none">hourglass_empty</span>
+  </button>
+  <br>
+  <br>
+  <br>
+  <div class="row d-none" data-target="encrypt.initialState">
+    <div class="col-lg-6">
+      <label>Your encrypted message</label>
+      <span class="material-icons md-light copy" data-action="click->encrypt#copyToClipboard">content_copy</span>
+      <span class="copy-badge badge badge-light d-none">Copied!</span>
+      <div class="custom-textarea output" spellcheck="false" contentEditable="true" data-target="encrypt.output"></div>
+    </div>
+  </div>
+</fieldset>

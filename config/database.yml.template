@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['ALICEANDBOB_DATABASE_USERNAME'] %>
+  password: <%= ENV['ALICEANDBOB_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: ALICEANDBOB_development
+
+test:
+  <<: *default
+  database: ALICEANDBOB_test
+
+production:
+  <<: *default
+  database: ALICEANDBOB_production
