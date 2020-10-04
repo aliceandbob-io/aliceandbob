@@ -78,7 +78,11 @@ body {
     min-height: 100vh;
     #main {
       padding-bottom: 100px;
+      #page {
+        min-height: calc(100vh - 62px - 135px - 25px - 80px); //100vh - header - footer - alert - nav
+      }
       footer {
+        min-height: 135px;
         padding: 15px;
         display: flex;
         flex-direction: column;
