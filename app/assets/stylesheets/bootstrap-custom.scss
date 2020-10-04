@@ -27,6 +27,6 @@ $my-primary: #e5e619;
     fill: gray;
   }
   svg:hover {
-    fill: #e5e619;
+    fill: $my-primary;
   }
 }

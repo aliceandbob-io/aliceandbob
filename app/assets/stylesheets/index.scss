@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap-custom";
 
 body {
   font-family: 'Roboto mono', sans-serif;
@@ -30,8 +31,25 @@ body {
     flex: 1;
     order: 2;
     position: relative;
-    padding-bottom: 50px;
     overflow: auto;
+    #page {
+      min-height: calc(100vh - 58px - 75px - 25px); //100vh - header - footer - alert
+    }
+    footer {
+      min-height: 75px;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      >div {
+        flex: 1;
+      }
+      a {
+        color: white;
+      }
+      a:hover {
+        color: $my-primary;
+      }
+    }
   }
   #nav {
     height: 100vh;
@@ -60,6 +78,15 @@ body {
     min-height: 100vh;
     #main {
       padding-bottom: 100px;
+      footer {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >div {
+          margin-bottom: 10px;
+        }
+      }
     }
     #nav {
       z-index: 1;
