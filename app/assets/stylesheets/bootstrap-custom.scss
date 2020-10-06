@@ -1,5 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 $bg-dark: #202124;
 $body-bg: $bg-dark;
 $body-color: #fff;
@@ -33,14 +31,6 @@ $my-primary: #e5e619;
     &:hover {
     fill: $my-primary;
     color: $my-primary;
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .navbar {
-    .nav-link:last-child {
-      padding-right: 0px;
     }
   }
 }

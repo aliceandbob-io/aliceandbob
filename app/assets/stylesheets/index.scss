@@ -1,3 +1,4 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "bootstrap-custom";
 
 body {
@@ -104,6 +105,14 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar {
+    .nav-link:last-child {
+      padding-right: 0px;
     }
   }
 }
