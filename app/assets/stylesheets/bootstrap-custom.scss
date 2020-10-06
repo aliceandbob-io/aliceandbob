@@ -16,17 +16,21 @@ $my-primary: #e5e619;
   font-weight: 900;
   letter-spacing: 2px;
   font-size: 1.5em;
-}
-
-.navbar-brand:hover {
-  color: $my-primary !important;
+  &:hover {
+    color: $my-primary !important;
+  }
 }
 
 .navbar {
-  svg {
-    fill: gray;
+  >div {
+    display: inline-flex;
   }
-  svg:hover {
+  .nav-link {
+    fill: gray;
+    color: gray;
+    &:hover {
     fill: $my-primary;
+    color: $my-primary;
+    }
   }
 }

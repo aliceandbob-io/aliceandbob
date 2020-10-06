@@ -20,18 +20,11 @@ body {
 
 }
 
-.after-load {
-  transition: background-color .2s ease-in-out;
-}
-
 #content {
   display: flex;
   flex-direction: row;
   #main {
     flex: 1;
-    order: 2;
-    position: relative;
-    overflow: auto;
     #page {
       min-height: calc(100vh - 58px - 75px - 25px); //100vh - header - footer - alert
     }
@@ -116,6 +109,14 @@ body {
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .navbar {
+    .nav-link:last-child {
+      padding-right: 0px;
+    }
+  }
+}
+
 fieldset {
   background-color: rgba(0,0,0,0.2);
   border-radius: 8px;
@@ -166,7 +167,6 @@ fieldset {
   font-size: 24px;
   vertical-align: middle;
   position: relative;
-  top: -1px;
 }
 
 .copy, .copy-badge {
