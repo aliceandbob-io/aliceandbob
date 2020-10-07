@@ -4,9 +4,9 @@ A free, light and easy to use client-side tool to generate PGP key pairs, encryp
 
 ## Check it out! 🔥
 
-[aliceandbob.io](http://aliceandbob.io/)
+[aliceandbob.io](http://www.aliceandbob.io/)
 
-<a href="http://aliceandbob.io/"><img src="public/aliceandbob-capture.png" alt="Screenshot1" width="100%"></a>
+<a href="http://www.aliceandbob.io/"><img src="public/aliceandbob-capture.png" alt="Screenshot1" width="100%"></a>
 
 ## Features ✨
 
@@ -34,7 +34,7 @@ You can also read the [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md).
 When forking and cloning the repo, don't forget to do the following:
 1. `yarn install --check-files`
 2. `bundle install`
-3. Change the name of `database.yml.template` into `database.yml`
+3. Duplicate the `database.yml.template` file and rename it `database.yml`
 4. Update the `database.yml` file as needed to match your configuration
 5. Then, `rails db:setup`.
 
