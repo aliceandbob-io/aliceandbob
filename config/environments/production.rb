@@ -5,7 +5,7 @@ Rails.application.configure do
   #}
 
   config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-    r301 %r{.*}, 'http://hidden-sea-65790.herokuapp.com$&', :scheme => 'https'
+    r301 %r{.*}, 'http://hidden-sea-65790.herokuapp.com', :scheme => 'https'
   end
 
   # Code is not reloaded between requests.
