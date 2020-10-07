@@ -1,11 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  #config.middleware.use Rack::HostRedirect, {
-  #  'aliceandbob.herokuapp.com' => 'www.aliceandbob.io'
-  #}
-
   config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-    r301 %r{.*}, 'http://hidden-sea-65790.herokuapp.com', :scheme => 'https'
+    r301 %r{.*}, 'http://www.aliceandbob.io$&', host: 'aliceandbob.herokuapp.com'
+    r301 %r{.*}, 'http://www.aliceandbob.io$&', :scheme => 'https'
   end
 
   # Code is not reloaded between requests.
