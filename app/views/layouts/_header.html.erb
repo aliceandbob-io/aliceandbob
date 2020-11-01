@@ -9,8 +9,14 @@
           </path>
         </svg>
       </a>
-    <%= link_to new_user_session_path, data: { turbolinks: false }, class: "nav-link" do %>
-      <span class="material-icons">login</span>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, :method => :delete, class: "nav-link" do %>
+        <span class="material-icons">exit_to_app</span>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, data: { turbolinks: false }, class: "nav-link" do %>
+        <span class="material-icons">login</span>
+      <% end %>
     <% end %>
   </div>
 </nav>

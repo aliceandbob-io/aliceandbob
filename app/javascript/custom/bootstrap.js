@@ -11,8 +11,8 @@ $( document ).on('turbolinks:load', function() {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  $('.alert').hide();
-  $('.alert').on('close.bs.alert', function (e) {
+  $('#alert_error').hide();
+  $('#alert_error').on('close.bs.alert', function (e) {
     e.preventDefault();
     $(this).hide();
   })

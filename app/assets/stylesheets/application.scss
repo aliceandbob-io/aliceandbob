@@ -6,5 +6,6 @@
 
 // The files declared after bootstrap will overwrite it. It can be custom files or whatever you want.
 @import 'index'; // Your "index.scss" must be placed in the same stylesheets folder
+@import 'devise-custom';
 @import 'spin';
 @import 'loader';
