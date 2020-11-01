@@ -1,6 +1,8 @@
+/*
 $( window ).on( "load", function() {
   $("#overlay").fadeOut("slow");
 });
+*/
 
 $( document ).on('turbolinks:load', function() {
   $(function () {

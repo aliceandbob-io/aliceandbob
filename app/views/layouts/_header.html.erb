@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark mb-3">
-  <%= link_to root_path, data: { turbolinks: false }, class: 'navbar-brand' do %>
+  <%= link_to root_path, class: 'navbar-brand' do %>
     ALICE & BOB
   <% end %>
   <div>
@@ -14,7 +14,7 @@
         <span class="material-icons">exit_to_app</span>
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path, data: { turbolinks: false }, class: "nav-link" do %>
+      <%= link_to new_user_session_path, class: "nav-link" do %>
         <span class="material-icons">login</span>
       <% end %>
     <% end %>
