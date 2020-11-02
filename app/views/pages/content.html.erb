@@ -1,0 +1,25 @@
+<div id="content">
+  <div id="nav">
+    <%= render "layouts/nav" %>
+  </div>
+  <div id="main">
+    <div class="container-fluid">
+      <%= render "layouts/header" %>
+      <%= render "pages/error" %>
+      <div id="page">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-generate" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <%= render "pages/generate" %>
+          </div>
+          <div class="tab-pane fade" id="v-pills-encrypt" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <%= render "pages/encrypt" %>
+          </div>
+          <div class="tab-pane fade" id="v-pills-decrypt" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <%= render "pages/decrypt" %>
+          </div>
+        </div>
+      </div>
+      <%= render "layouts/footer" %>
+    </div>
+  </div>
+</div>

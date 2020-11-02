@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render 'layouts/google_analytics' %>
+    <title>Alice & Bob • A free, light and easy to use PGP encryption tool</title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="robots" content="index, follow"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <meta name="description" content="A free, light and easy to use tool to generate PGP key pairs, encrypt and decrypt messages."/>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag asset_path('favicon.png') %>
+  </head>
+
+  <body>
+    <!-- Overlay to be implement -->
+    <!--
+    <div id="overlay">
+     <div class="text-center">
+       <div class="sk-chase">
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!-- Main content -->
+    <div id="wrap" class="after-load">
+      <!-- Handling flash message -->
+      <div class="container fixed-top" style="margin-top: 25px;">
+        <div class="col-md-8 offset-md-2">
+          <% flash.each do |name, msg| %>
+            <div id="alert_devise" class="<%= flash_class(name) %> alert-dismissible fade show" role="alert">
+              <%= msg %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

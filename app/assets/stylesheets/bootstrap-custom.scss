@@ -1,0 +1,36 @@
+$bg-dark: #202124;
+$body-bg: $bg-dark;
+$body-color: #fff;
+
+$theme-colors: (
+  "primary": #e5e619
+);
+
+$my-primary: #e5e619;
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: black !important;
+}
+
+.navbar-brand {
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  &:hover {
+    color: $my-primary !important;
+  }
+}
+
+.navbar {
+  >div {
+    display: inline-flex;
+  }
+  .nav-link {
+    fill: gray;
+    color: gray;
+    &:hover {
+    fill: $my-primary;
+    color: $my-primary;
+    }
+  }
+}
