@@ -4,9 +4,9 @@ A free, light and easy to use client-side tool to generate PGP key pairs, encryp
 
 ## Check it out! 🔥
 
-[aliceandbob.io](https://www.aliceandbob.io/)
+[aliceandbob.io](https://aliceandbob.io/)
 
-<a href="https://www.aliceandbob.io/"><img src="public/aliceandbob-capture.png" alt="Screenshot1" width="100%"></a>
+<a href="https://aliceandbob.io/"><img src="public/aliceandbob-capture.png" alt="Screenshot1" width="100%"></a>
 
 ## Features ✨
 

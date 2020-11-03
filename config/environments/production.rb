@@ -1,8 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-    r301 %r{.*}, 'https://www.aliceandbob.io$&', host: 'aliceandbob.herokuapp.com'
-    r301 %r{.*}, 'https://www.aliceandbob.io$&', :scheme => 'http'
+    r301 %r{.*}, 'https://aliceandbob.io$&', host: 'aliceandbob.herokuapp.com'
   end
 
   # Code is not reloaded between requests.
