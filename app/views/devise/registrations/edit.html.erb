@@ -25,7 +25,8 @@
                 <% end %>
 
                 <div class="form-group">
-                  <%= f.label :password %> (leave blank if you don't want to change it)<br />
+                  <%= f.label :password %>
+                  <small class="text-muted">(leave blank if you don't want to change it)</small><br />
                   <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
                   <% if @minimum_password_length %>
                     <small class="form-text text-muted">(<%= @minimum_password_length %> characters minimum)</small>
