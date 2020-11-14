@@ -34,3 +34,13 @@ $my-primary: #e5e619;
     }
   }
 }
+
+input.form-control, input.form-control:focus {
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+}
+
+.input-group-append > a {
+  text-decoration: none;
+  cursor: pointer;
+}

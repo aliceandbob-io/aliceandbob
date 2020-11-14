@@ -1,5 +1,26 @@
 <fieldset data-controller="keys" class="mb-5">
   <legend>Generate a PGP key pair</legend>
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" data-target="keys.emailParams"></input>
+      </div>
+      <div class="form-group">
+        <label>Passphrase</label>
+        <div class="input-group">
+          <input type="password" class="form-control" data-target="keys.passphraseParams">
+          <div class="input-group-append" data-action="click->keys#showPassphrase">
+            <a class="input-group-text">
+              <span class="material-icons">
+                visibility_off
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <button data-action="click->keys#generate" data-target="keys.generateButton" type="button" class="btn btn-primary btn-lg">
     <span class="mr-3">Generate</span>
     <span class="material-icons icon-fix">vpn_key</span>

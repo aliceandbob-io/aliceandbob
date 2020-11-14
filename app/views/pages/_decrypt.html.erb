@@ -1,6 +1,6 @@
 <fieldset data-controller="decrypt" class="mb-5">
   <legend>Decrypt a message</legend>
-  <div class="row">
+  <div class="row mb-3">
     <div class="col-md-6">
         <label>Text to decrypt</label>
         <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="decrypt.input"></div>
@@ -8,6 +8,21 @@
     <div class="col-md-6">
         <label>Your PGP private key</label>
         <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="decrypt.key"></div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label>Passphrase</label>
+        <div class="input-group">
+          <input type="password" class="form-control" data-target="decrypt.passphrase">
+          <div class="input-group-append" data-action="click->decrypt#showPassphrase">
+            <a class="input-group-text">
+              <span class="material-icons">
+                visibility_off
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button data-action="click->decrypt#decrypt" data-target="decrypt.decryptButton" type="button" class="btn btn-primary btn-lg">

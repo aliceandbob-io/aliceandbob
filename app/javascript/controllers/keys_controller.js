@@ -1,9 +1,9 @@
 import { Controller } from "stimulus";
 import { generateKey } from "../model/crypto";
-import { download, copy } from "../model/index";
+import { download, copy, showPass } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["privateKey", "publicKey", "initialState", "generateButton"];
+  static targets = ["emailParams", "passphraseParams", "privateKey", "publicKey", "initialState", "generateButton"];
 
   async generate(e) {
     // Initial display
@@ -15,7 +15,11 @@ export default class extends Controller {
     this.generateButtonTarget.getElementsByClassName("material-icons")[0].classList.add("d-none");
     this.generateButtonTarget.getElementsByClassName("material-icons")[1].classList.remove("d-none");
 
-    const key = await generateKey().catch((err) => { console.error(err); });
+    // Params
+    const emailParams = this.emailParamsTarget.value;
+    const passphraseParams = this.passphraseParamsTarget.value;
+
+    const key = await generateKey(emailParams, passphraseParams).catch((err) => { console.error(err); });
 
     if (key) {
       this.privateKeyTarget.innerText = key.privateKeyArmored;
@@ -29,6 +33,11 @@ export default class extends Controller {
     this.generateButtonTarget.disabled = false;
     this.generateButtonTarget.getElementsByClassName("material-icons")[0].classList.remove("d-none");
     this.generateButtonTarget.getElementsByClassName("material-icons")[1].classList.add("d-none");
+  }
+
+  showPassphrase(e) {
+    let el = this.passphraseParamsTarget;
+    showPass(el);
   }
 
   copyToClipboard(e) {
