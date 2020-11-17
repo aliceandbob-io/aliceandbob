@@ -1,6 +1,7 @@
 <nav class="navbar navbar-dark mb-3">
   <%= link_to root_path, class: 'navbar-brand' do %>
-    ALICE & BOB
+    <span class="d-block d-sm-none">A&B</span>
+    <span class="d-none d-sm-block">ALICE & BOB</span>
   <% end %>
   <div>
       <a href="https://github.com/aliceandbob-io/aliceandbob" target="_blank" class="nav-link">
@@ -10,6 +11,9 @@
         </svg>
       </a>
     <% if user_signed_in? %>
+      <%= link_to edit_user_registration_path, class: "nav-link" do %>
+        <span class="material-icons">settings</span>
+      <% end %>
       <%= link_to destroy_user_session_path, :method => :delete, class: "nav-link" do %>
         <span class="material-icons">exit_to_app</span>
       <% end %>
