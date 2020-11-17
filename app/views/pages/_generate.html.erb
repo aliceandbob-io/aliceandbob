@@ -1,6 +1,28 @@
 <fieldset data-controller="keys" class="mb-5">
   <legend>Generate a PGP key pair</legend>
-  <button data-action="click->keys#generate" data-target="keys.generateButton" type="button" class="btn btn-primary btn-lg">
+  <div class="row mb-3">
+    <div class="col">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" data-target="keys.emailParams" placeholder="email@example.com" value="<%= @email %>">
+      </div>
+      <div class="form-group">
+        <label>Passphrase</label>
+        <div class="mb-2"><small class="text-muted">There is no way to recover your passphrase so be sure not to forget it.</small></div>
+        <div class="input-group">
+          <input type="password" class="form-control" data-target="keys.passphraseParams" placeholder="M@keSure-To_Use_a_strongPassphrase!">
+          <div class="input-group-append" data-action="click->keys#showPassphrase">
+            <a class="input-group-text">
+              <span class="material-icons">
+                visibility_off
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button data-action="click->keys#generate" data-target="keys.generateButton" type="submit" class="btn btn-primary btn-lg">
     <span class="mr-3">Generate</span>
     <span class="material-icons icon-fix">vpn_key</span>
     <span class="material-icons icon-fix spin d-none">hourglass_empty</span>

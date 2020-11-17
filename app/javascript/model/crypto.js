@@ -2,13 +2,15 @@ export async function loadPGP() {
   await import("../lib/openpgp");
 }
 
-export async function generateKey() {
+export async function generateKey(emailParams, passphraseParams) {
   await loadPGP();
   const name = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-  const email = Date.now() + "@example.com";
+  const email = emailParams;
+  const passphrase = passphraseParams;
   return await openpgp.generateKey({
     curve: "curve25519",
     userIds: [{ name: name, email: email }],
+    passphrase: passphrase,
   });
 }
 
@@ -25,10 +27,11 @@ export async function encryptText(text, key) {
   return encrypted;
 }
 
-export async function decryptText(text, key) {
+export async function decryptText(text, key, passphrase) {
   await loadPGP();
   const privateKeyArmored = key;
   const { keys: [privateKey] } = await openpgp.key.readArmored(privateKeyArmored);
+  await privateKey.decrypt(passphrase);
 
   const { data: decrypted } = await openpgp.decrypt({
       message: await openpgp.message.readArmored(text),

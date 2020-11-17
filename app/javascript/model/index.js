@@ -12,6 +12,14 @@ export function download(text, fileType, fileName) {
   setTimeout(function() { URL.revokeObjectURL(a.href); }, 1500);
 }
 
+export function showPass(el) {
+  if (el.type === "password") {
+    el.type = "text";
+  } else {
+    el.type = "password";
+  }
+}
+
 export function copy(text, el) {
   const textArea  = document.createElement('textarea');
   document.body.appendChild(textArea);

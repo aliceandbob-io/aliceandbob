@@ -34,3 +34,26 @@ $my-primary: #e5e619;
     }
   }
 }
+
+.form-control, .form-control:focus, .form-control:hover {
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  border: 1px solid transparent;
+  text-overflow: ellipsis;
+  box-shadow: none;
+  &:focus, &:hover {
+    border: 1px solid white;
+  }
+}
+
+.input-group-text {
+  background-color: rgba(0,0,0,0.2);
+  color: grey;
+  border: none;
+  box-shadow: none;
+}
+
+.input-group-append > a {
+  text-decoration: none;
+  cursor: pointer;
+}

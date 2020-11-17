@@ -1,9 +1,9 @@
 import { Controller } from "stimulus";
 import { decryptText } from "../model/crypto";
-import { copy } from "../model/index";
+import { copy, showPass } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["input", "output", "key", "initialState", "decryptButton"];
+  static targets = ["input", "output", "key", "passphrase", "initialState", "decryptButton"];
 
   async decrypt() {
     // Initial display
@@ -14,6 +14,7 @@ export default class extends Controller {
     // Get message and key
     const message = this.inputTarget.innerText;
     const key = this.keyTarget.innerText;
+    const passphrase = this.passphraseTarget.value;
 
     // Validation form
     if (this.inputTarget.textContent == "") {
@@ -31,11 +32,14 @@ export default class extends Controller {
     this.decryptButtonTarget.getElementsByClassName("material-icons")[0].classList.add("d-none");
     this.decryptButtonTarget.getElementsByClassName("material-icons")[1].classList.remove("d-none");
 
-    const decrypted = await decryptText(message, key).catch((err) => { console.error(err); });
+    const decrypted = await decryptText(message, key, passphrase).catch((err) => { console.error(err); });
 
     if (decrypted) {
       this.outputTarget.innerText = decrypted;
       this.initialStateTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(this.initialStateTarget).offset().top
+      }, 1000);
     } else {
       $('#alert_error').show();
     }
@@ -44,6 +48,11 @@ export default class extends Controller {
     this.decryptButtonTarget.disabled = false;
     this.decryptButtonTarget.getElementsByClassName("material-icons")[0].classList.remove("d-none");
     this.decryptButtonTarget.getElementsByClassName("material-icons")[1].classList.add("d-none");
+  }
+
+  showPassphrase(e) {
+    let el = this.passphraseTarget;
+    showPass(el);
   }
 
   copyToClipboard(e) {
