@@ -36,6 +36,9 @@ export default class extends Controller {
     if (encrypted) {
       this.outputTarget.innerText = encrypted;
       this.initialStateTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(this.initialStateTarget).offset().top
+      }, 1000);
     } else {
       $('#alert_error').show();
     }

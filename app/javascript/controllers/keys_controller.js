@@ -9,6 +9,19 @@ export default class extends Controller {
     // Initial display
     e.preventDefault();
     this.initialStateTarget.classList.add("d-none");
+    this.emailParamsTarget.classList.remove("border-danger");
+    this.passphraseParamsTarget.classList.remove("border-danger");
+
+    // Validation form
+    if (this.emailParamsTarget.value == "") {
+      this.emailParamsTarget.classList.add("border-danger");
+    }
+    if (this.passphraseParamsTarget.value == "") {
+      this.passphraseParamsTarget.classList.add("border-danger");
+    }
+    if (this.emailParamsTarget.value == "" || this.passphraseParamsTarget.value == "") {
+      return
+    }
 
     // UX button
     this.generateButtonTarget.disabled = true;
@@ -25,6 +38,9 @@ export default class extends Controller {
       this.privateKeyTarget.innerText = key.privateKeyArmored;
       this.publicKeyTarget.innerText = key.publicKeyArmored;
       this.initialStateTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(this.initialStateTarget).offset().top
+      }, 1000);
     } else {
       $('#alert_error').show();
     }

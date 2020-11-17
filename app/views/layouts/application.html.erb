@@ -44,7 +44,7 @@
       <div class="container fixed-top" style="margin-top: 25px;">
         <div class="col-md-8 offset-md-2">
           <% flash.each do |name, msg| %>
-            <div id="alert_devise" class="<%= flash_class(name) %> alert-dismissible fade show" role="alert">
+            <div id="alert_devise" class="<%= flash_class(name) %> alert alert-dismissible fade show" role="alert">
               <%= msg %>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
