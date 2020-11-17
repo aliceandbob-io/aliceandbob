@@ -26,13 +26,14 @@ body {
   #main {
     flex: 1;
     #page {
-      min-height: calc(100vh - 58px - 75px - 25px); //100vh - header - footer - alert
+      min-height: calc(100vh - 58px - 76px - 25px); //100vh - header - footer - alert
     }
     footer {
       min-height: 75px;
       padding: 25px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       >div {
         flex: 1;
       }
@@ -78,7 +79,7 @@ body {
         min-height: 135px;
         padding: 15px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         >div {
           margin-bottom: 10px;
