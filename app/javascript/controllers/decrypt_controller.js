@@ -10,6 +10,7 @@ export default class extends Controller {
     this.initialStateTarget.classList.add("d-none");
     this.inputTarget.classList.remove("border-danger");
     this.keyTarget.classList.remove("border-danger");
+    this.passphraseTarget.classList.remove("border-danger");
 
     // Get message and key
     const message = this.inputTarget.innerText;
@@ -23,14 +24,17 @@ export default class extends Controller {
     if (this.keyTarget.textContent == "") {
       this.keyTarget.classList.add("border-danger");
     }
-    if (this.keyTarget.textContent == "" || this.inputTarget.textContent == "") {
+    if (this.passphraseTarget.value == "") {
+      this.passphraseTarget.classList.add("border-danger");
+    }
+    if (this.keyTarget.textContent == "" || this.inputTarget.textContent == "" || this.passphraseTarget.value == "") {
       return
     }
 
     // Button UX
     this.decryptButtonTarget.disabled = true;
     this.decryptButtonTarget.getElementsByClassName("material-icons")[0].classList.add("d-none");
-    this.decryptButtonTarget.getElementsByClassName("material-icons")[1].classList.remove("d-none");
+    this.decryptButtonTarget.getElementsByClassName("spinner-border")[0].classList.remove("d-none");
 
     const decrypted = await decryptText(message, key, passphrase).catch((err) => { console.error(err); });
 
@@ -47,7 +51,7 @@ export default class extends Controller {
     // Go back to initial UX button
     this.decryptButtonTarget.disabled = false;
     this.decryptButtonTarget.getElementsByClassName("material-icons")[0].classList.remove("d-none");
-    this.decryptButtonTarget.getElementsByClassName("material-icons")[1].classList.add("d-none");
+    this.decryptButtonTarget.getElementsByClassName("spinner-border")[0].classList.add("d-none");
   }
 
   showPassphrase(e) {

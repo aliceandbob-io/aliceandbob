@@ -29,7 +29,7 @@ export default class extends Controller {
     // Button UX
     this.encryptButtonTarget.disabled = true;
     this.encryptButtonTarget.getElementsByClassName("material-icons")[0].classList.add("d-none");
-    this.encryptButtonTarget.getElementsByClassName("material-icons")[1].classList.remove("d-none");
+    this.encryptButtonTarget.getElementsByClassName("spinner-border")[0].classList.remove("d-none");
 
     const encrypted = await encryptText(message, key).catch((err) => { console.error(err); });
 
@@ -46,7 +46,7 @@ export default class extends Controller {
     // Go back to initial UX button
     this.encryptButtonTarget.disabled = false;
     this.encryptButtonTarget.getElementsByClassName("material-icons")[0].classList.remove("d-none");
-    this.encryptButtonTarget.getElementsByClassName("material-icons")[1].classList.add("d-none");
+    this.encryptButtonTarget.getElementsByClassName("spinner-border")[0].classList.add("d-none");
   }
 
   copyToClipboard(e) {
