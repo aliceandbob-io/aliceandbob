@@ -26,7 +26,7 @@ export default class extends Controller {
     // UX button
     this.generateButtonTarget.disabled = true;
     this.generateButtonTarget.getElementsByClassName("material-icons")[0].classList.add("d-none");
-    this.generateButtonTarget.getElementsByClassName("material-icons")[1].classList.remove("d-none");
+    this.generateButtonTarget.getElementsByClassName("spinner-border")[0].classList.remove("d-none");
 
     // Params
     const emailParams = this.emailParamsTarget.value;
@@ -48,7 +48,7 @@ export default class extends Controller {
     // Go back to initial UX button
     this.generateButtonTarget.disabled = false;
     this.generateButtonTarget.getElementsByClassName("material-icons")[0].classList.remove("d-none");
-    this.generateButtonTarget.getElementsByClassName("material-icons")[1].classList.add("d-none");
+    this.generateButtonTarget.getElementsByClassName("spinner-border")[0].classList.add("d-none");
   }
 
   showPassphrase(e) {

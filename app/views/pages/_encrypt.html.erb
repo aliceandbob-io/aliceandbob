@@ -1,6 +1,6 @@
 <fieldset data-controller="encrypt" class="mb-5">
   <legend>Encrypt a message</legend>
-  <div class="row">
+  <div class="row mb-3">
     <div class="col-md-6">
       <label>Text to encrypt</label>
       <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.input"></div>
@@ -13,7 +13,7 @@
   <button data-action="click->encrypt#encrypt" data-target="encrypt.encryptButton" type="button" class="btn btn-primary btn-lg">
     <span class="mr-3">Encrypt</span>
     <span class="material-icons icon-fix">lock</span>
-    <span class="material-icons icon-fix spin d-none">hourglass_empty</span>
+    <span class="spinner-border icon-fix spinner-border-sm d-none" role="status" aria-hidden="true"></span>
   </button>
   <br>
   <br>
