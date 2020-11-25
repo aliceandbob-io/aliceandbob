@@ -3,7 +3,7 @@ import { generateKey } from "../model/crypto";
 import { download, copy, showPass } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["emailParams", "passphraseParams", "privateKey", "publicKey", "initialState", "generateButton"];
+  static targets = ["emailParams", "passphraseParams", "curveParams", "privateKey", "publicKey", "initialState", "generateButton"];
 
   async generate(e) {
     // Initial display
@@ -32,7 +32,10 @@ export default class extends Controller {
     const emailParams = this.emailParamsTarget.value;
     const passphraseParams = this.passphraseParamsTarget.value;
 
-    const key = await generateKey(emailParams, passphraseParams).catch((err) => { console.error(err); });
+    // Optional Params
+    const curveParams = this.curveParamsTarget.value;
+
+    const key = await generateKey(emailParams, passphraseParams, curveParams).catch((err) => { console.error(err); });
 
     if (key) {
       this.privateKeyTarget.innerText = key.privateKeyArmored;

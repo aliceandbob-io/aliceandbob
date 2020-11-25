@@ -20,6 +20,20 @@
           </div>
         </div>
       </div>
+      <div class="form-inline">
+        <label class="my-1 mr-2" for="exampleFormControlSelect1">Encryption:</label>
+        <select class="form-control" data-target="keys.curveParams">
+          <option class="bg-dark text-white" value="curve25519" selected>curve25519</option>
+          <option class="bg-dark text-white" value="ed25519">ed25519</option>
+          <option class="bg-dark text-white" value="p256">p256</option>
+          <option class="bg-dark text-white" value="p384">p384</option>
+          <option class="bg-dark text-white" value="p521">p521</option>
+          <option class="bg-dark text-white" value="secp256k1">secp256k1</option>
+          <option class="bg-dark text-white" value="brainpoolP256r1">brainpoolP256r1</option>
+          <option class="bg-dark text-white" value="brainpoolP384r1">brainpoolP384r1</option>
+          <option class="bg-dark text-white" value="brainpoolP512r1">brainpoolP512r1</option>
+        </select>
+      </div>
     </div>
   </div>
   <button data-action="click->keys#generate" data-target="keys.generateButton" type="submit" class="btn btn-primary btn-lg">
