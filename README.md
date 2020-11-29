@@ -40,7 +40,7 @@ When forking and cloning the repo, don't forget to do the following:
 
 ## Do you like this app? ❤️
 
-<a href="https://www.buymeacoffee.com/aliceandbobio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/aliceandbobio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217p"/></a>
 
 ## License 📄
 
