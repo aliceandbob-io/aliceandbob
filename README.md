@@ -38,6 +38,10 @@ When forking and cloning the repo, don't forget to do the following:
 4. Update the `database.yml` file as needed to match your configuration
 5. Then, `rails db:setup`.
 
+## Do you like this app? ❤️
+
+<a href="https://www.buymeacoffee.com/aliceandbobio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217"/></a>
+
 ## License 📄
 
 Licensed under the [MIT License](https://github.com/aliceandbob-io/aliceandbob.io/blob/master/LICENSE).
