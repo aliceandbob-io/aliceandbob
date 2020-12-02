@@ -5,6 +5,7 @@ body {
   font-family: 'Roboto mono', sans-serif;
 }
 
+/* Overlay to be implemented
 #overlay {
   position: absolute;
   display: flex;
@@ -17,8 +18,8 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-
 }
+*/
 
 #content {
   display: flex;
@@ -125,6 +126,19 @@ body {
   .navbar {
     .nav-link:last-child {
       padding-right: 0px;
+    }
+  }
+  .navbar-brand {
+    font-size: 1.2em;
+  }
+  .shift {
+    &:nth-last-of-type(-n+2) {
+      bottom: -3px;
+      position: relative;
+      left: -5px !important;
+    }
+    &:last-of-type {
+      left: -10px !important;
     }
   }
 }
