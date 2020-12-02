@@ -14,6 +14,7 @@ $( document ).on('turbolinks:load', function() {
   })
 
   $('#alert_error').hide();
+  $("#alert_error").removeClass("d-none");
   $('#alert_error').on('close.bs.alert', function (e) {
     e.preventDefault();
     $(this).hide();

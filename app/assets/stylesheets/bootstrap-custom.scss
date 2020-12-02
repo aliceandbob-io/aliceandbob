@@ -13,11 +13,22 @@ $my-primary: #e5e619;
 }
 
 .navbar-brand {
-  font-weight: 900;
-  letter-spacing: 2px;
+  margin-right: 0px;
+  font-family: 'Press Start 2P', cursive;
   font-size: 1.5em;
   &:hover {
     color: $my-primary !important;
+  }
+  .shift {
+    font-size: 0.7em;
+    &:nth-last-of-type(-n+2) {
+      bottom: -3px;
+      position: relative;
+      left: -8px;
+    }
+    &:last-of-type {
+      left: -16px;
+    }
   }
 }
 

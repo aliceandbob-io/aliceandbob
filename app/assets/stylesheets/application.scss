@@ -1,7 +1,9 @@
 @import 'bootstrap-custom'; // Your "bootstrap-custom.scss" file shall be placed in the same stylesheets folder
 @import 'bootstrap/scss/bootstrap';
 
+// Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 // The files declared after bootstrap will overwrite it. It can be custom files or whatever you want.
