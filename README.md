@@ -6,7 +6,7 @@ A free, light and easy to use client-side tool to generate PGP key pairs, encryp
 
 [aliceandbob.io](https://aliceandbob.io/)
 
-<a href="https://aliceandbob.io/"><img src="public/aliceandbob-capture.png" alt="Screenshot1" width="100%"></a>
+<a href="https://aliceandbob.io/"><img src="public/browser-screenshot-1.png" alt="Screenshot1" width="100%"></a>
 
 ## Features ✨
 
