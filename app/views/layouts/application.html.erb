@@ -2,9 +2,17 @@
 <html lang="en">
   <head>
     <%= render 'layouts/google_analytics' %>
-    <title>Alice and Bob • A free, light and easy to use client-side PGP tool</title>
+    <title><%= meta_title %></title>
 
-    <meta name="description" content="A free, light and easy to use client-side PGP tool. Helps you generate PGP key pairs with custom params, encrypt and decrypt messages. This user-friendly tool is based on OpenPGP.js, a project which aims to provide an Open Source OpenPGP library in JavaScript."/>
+    <meta name="description" content="<%= meta_description %>">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
