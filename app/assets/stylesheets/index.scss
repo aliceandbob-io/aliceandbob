@@ -167,7 +167,7 @@ fieldset {
   font-weight: 300;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 8px;
-  word-wrap: break-word;
+  word-break: break-word;
   &:focus, &:hover {
     outline: none;
     border-radius: 8px;
