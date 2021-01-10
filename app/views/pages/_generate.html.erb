@@ -1,5 +1,8 @@
 <fieldset data-controller="keys" class="mb-5">
   <legend>Generate a PGP key pair</legend>
+  <div class="row d-none error bg-danger rounded p-3 mb-4" data-target="keys.error">
+    <em>An error has occured. Please verify the submitted data or try again later.</em>
+  </div>
   <div class="row mb-3">
     <div class="col">
       <div class="form-group mb-3">

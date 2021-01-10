@@ -3,7 +3,7 @@ import { decryptText } from "../model/crypto";
 import { copy, showPass } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["input", "output", "key", "passphrase", "initialState", "decryptButton"];
+  static targets = ["input", "output", "key", "passphrase", "initialState", "decryptButton", "error"];
 
   async decrypt() {
     // Initial display
@@ -11,6 +11,7 @@ export default class extends Controller {
     this.inputTarget.classList.remove("border-danger");
     this.keyTarget.classList.remove("border-danger");
     this.passphraseTarget.classList.remove("border-danger");
+    this.errorTarget.classList.add("d-none");
 
     // Get message and key
     const message = this.inputTarget.innerText;
@@ -41,11 +42,15 @@ export default class extends Controller {
     if (decrypted) {
       this.outputTarget.innerText = decrypted;
       this.initialStateTarget.classList.remove("d-none");
+      this.errorTarget.classList.add("d-none");
       $([document.documentElement, document.body]).animate({
         scrollTop: $(this.initialStateTarget).offset().top
       }, 1000);
     } else {
-      $('#alert_error').show();
+      this.errorTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+      }, 1000);
     }
 
     // Go back to initial UX button
