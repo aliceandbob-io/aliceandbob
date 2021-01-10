@@ -27,10 +27,10 @@ body {
   #main {
     flex: 1;
     #page {
-      min-height: calc(100vh - 58px - 25px - 60px - 75px - 48px); //100vh - header - alert - bmc - section - footer dot
+      min-height: calc(100vh - 62px - 16px - 60px - 75px - 48px - 50px); //100vh - header - header margin - bmc - section - footer dot - footer margin
     }
     footer {
-      //margin-top: 75px;
+      margin-top: 50px;
       .bmc-btn {
         height: 45px !important;
         margin-bottom: 15px;
@@ -83,9 +83,6 @@ body {
     min-height: 100vh;
     #main {
       padding-bottom: 100px;
-      #page {
-        min-height: calc(100vh - 62px - 180px - 25px - 80px); //100vh - header - footer - alert - nav
-      }
       footer {
         >.section {
           //min-height: 135px;
