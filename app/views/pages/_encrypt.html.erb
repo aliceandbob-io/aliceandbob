@@ -1,11 +1,14 @@
 <fieldset data-controller="encrypt" class="mb-5">
   <legend>Encrypt a message</legend>
+  <div class="row d-none error bg-danger rounded p-3 mb-4" data-target="encrypt.error">
+    <em>An error has occured. Please verify the submitted data or try again later.</em>
+  </div>
   <div class="row mb-3">
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <label>Text to encrypt</label>
       <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.input"></div>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <label>Public PGP key of the receiver</label>
       <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.key"></div>
     </div>

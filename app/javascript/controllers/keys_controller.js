@@ -3,7 +3,7 @@ import { generateKey } from "../model/crypto";
 import { download, copy, showPass } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["emailParams", "passphraseParams", "privateKey", "publicKey", "initialState", "generateButton"];
+  static targets = ["emailParams", "passphraseParams", "privateKey", "publicKey", "initialState", "generateButton", "error"];
 
   async generate(e) {
     // Initial display
@@ -11,6 +11,7 @@ export default class extends Controller {
     this.initialStateTarget.classList.add("d-none");
     this.emailParamsTarget.classList.remove("border-danger");
     this.passphraseParamsTarget.classList.remove("border-danger");
+    this.errorTarget.classList.add("d-none");
 
     // Validation form
     if (this.emailParamsTarget.value == "") {
@@ -38,11 +39,15 @@ export default class extends Controller {
       this.privateKeyTarget.innerText = key.privateKeyArmored;
       this.publicKeyTarget.innerText = key.publicKeyArmored;
       this.initialStateTarget.classList.remove("d-none");
+      this.errorTarget.classList.add("d-none");
       $([document.documentElement, document.body]).animate({
         scrollTop: $(this.initialStateTarget).offset().top
       }, 1000);
     } else {
-      $('#alert_error').show();
+      this.errorTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+      }, 1000);
     }
 
     // Go back to initial UX button
@@ -65,7 +70,10 @@ export default class extends Controller {
     } else if (el.classList.contains("private-key")) {
       text = this.privateKeyTarget.innerText;
     } else {
-      $('#alert_error').show();
+      this.errorTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+      }, 1000);
       return
     }
 
@@ -83,7 +91,10 @@ export default class extends Controller {
       download(text, "txt", "A&B - Private Key");
     } else {
       download("Let's hope you didn't have any bad intention by doing so ;)", "txt", "Well try");
-      $('#alert_error').show();
+      this.errorTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+      }, 1000);
     }
 
   }

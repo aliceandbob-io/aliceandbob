@@ -3,13 +3,14 @@ import { encryptText } from "../model/crypto";
 import { copy } from "../model/index";
 
 export default class extends Controller {
-  static targets = ["input", "output", "key", "initialState", "encryptButton"];
+  static targets = ["input", "output", "key", "initialState", "encryptButton", "error"];
 
   async encrypt() {
     // Initial display
     this.initialStateTarget.classList.add("d-none");
     this.inputTarget.classList.remove("border-danger");
     this.keyTarget.classList.remove("border-danger");
+    this.errorTarget.classList.add("d-none");
 
     // Get message and key
     const message = this.inputTarget.innerText;
@@ -36,11 +37,15 @@ export default class extends Controller {
     if (encrypted) {
       this.outputTarget.innerText = encrypted;
       this.initialStateTarget.classList.remove("d-none");
+      this.errorTarget.classList.add("d-none");
       $([document.documentElement, document.body]).animate({
         scrollTop: $(this.initialStateTarget).offset().top
       }, 1000);
     } else {
-      $('#alert_error').show();
+      this.errorTarget.classList.remove("d-none");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: 0
+      }, 1000);
     }
 
     // Go back to initial UX button
