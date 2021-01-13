@@ -108,12 +108,6 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        >a {
-          margin: 0.5rem;
-          >svg {
-            margin: 0.5rem;
-          }
-        }
       }
     }
   }
@@ -121,6 +115,9 @@ body {
 
 @include media-breakpoint-down(sm) {
   .navbar {
+    .nav-link {
+      padding: 0.8rem;
+    }
     .nav-link:last-child {
       padding-right: 0px;
     }
