@@ -1,34 +1,27 @@
+<% content_for :meta_title, "Alice and Bob • Forgot yourpassword?" %>
 
-<div class="container-fluid">
-  <div class="devise-page">
-    <div class="mb-5 text-center">
-      <h1>aliceandbob.io</h1>
-      <%= image_tag('favicon.ico', size: "50x50") %>
-    </div>
-    <div class="devise-block">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 m-auto">
-          <div class="card text-white bg-dark mb-3">
-            <div class="card-body">
-              <h2 class="mb-5">Forgot your password?</h2>
+<div class="bg-info">
+  <div class="devise-page d-flex full-background min-vh-100">
+    <div class="col-sm-12 col-md-6 m-auto">
+      <div class="card text-white bg-dark">
+        <div class="card-body">
+          <h2 class="mb-5">Forgot your password?</h2>
 
-              <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-                <%= render "devise/shared/error_messages", resource: resource %>
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
 
-                <div class="form-group">
-                  <%= f.label :email %><br />
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-                </div>
-
-                <div class="form-group mb-5">
-                  <%= f.submit "Send me reset password instructions", class: "btn btn-primary text-wrap" %>
-                </div>
-              <% end %>
-
-              <%= render "devise/shared/links" %>
-              <%= link_to "< Back to home", root_path, class: "card-link float-right" %>
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
             </div>
-          </div>
+
+            <div class="form-group mb-5">
+              <%= f.submit "Send me reset password instructions", class: "btn btn-primary text-wrap" %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+          <%= link_to "< Back to home", online_pgp_tool_path, class: "card-link float-right" %>
         </div>
       </div>
     </div>

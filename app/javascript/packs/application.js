@@ -15,8 +15,12 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-// Add Bootstrap
 require("bootstrap");
-require("custom/bootstrap");
+require("custom/index");
 
-import "controllers"
+// FONTAWESOME
+import "@fortawesome/fontawesome-free/js/all";
+FontAwesome.config.mutateApproach = 'sync'
+
+// STIMULUS IMPORT
+import('controllers')

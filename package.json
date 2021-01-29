@@ -2,11 +2,12 @@
   "name": "aliceandbob",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.0.0-alpha5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",

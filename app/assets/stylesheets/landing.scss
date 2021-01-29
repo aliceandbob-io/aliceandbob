@@ -1,0 +1,49 @@
+#logo {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 0.9;
+  .and {
+    position: relative;
+    left: 12px;
+  }
+  .bob {
+    position: relative;
+    left: 30px;
+    top: 5px;
+  }
+  .shift {
+    font-size: 0.8em;
+    position: relative;
+    left: -17px;
+    bottom: -9px;
+  }
+  .io {
+    font-size: 0.8em;
+    position: relative;
+    left: -32px;
+    bottom: -9px;
+    letter-spacing: normal;
+  }
+}
+
+#landing_header {
+  margin-bottom: 50px;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+@include media-breakpoint-down(sm) {
+  section {
+    margin-bottom: 100px;
+  }
+  #screenshot {
+    margin-top: 100px;
+  }
+}
+
+.flex-even {
+  flex: 1;
+}

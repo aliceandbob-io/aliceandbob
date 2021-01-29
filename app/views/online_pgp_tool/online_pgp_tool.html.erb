@@ -1,24 +1,26 @@
+<% content_for :meta_title, "Alice and Bob • Online PGP tool" %>
+
 <div id="content">
   <div id="nav">
-    <%= render "layouts/nav" %>
+    <%= render "online_pgp_tool/nav" %>
   </div>
   <div id="main">
     <div class="container-fluid">
-      <%= render "layouts/header" %>
+      <%= render "online_pgp_tool/header" %>
       <div id="page">
         <div class="tab-content" id="v-pills-tabContent">
           <div class="tab-pane fade show active" id="v-pills-generate" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            <%= render "pages/generate" %>
+            <%= render "online_pgp_tool/generate" %>
           </div>
           <div class="tab-pane fade" id="v-pills-encrypt" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-            <%= render "pages/encrypt" %>
+            <%= render "online_pgp_tool/encrypt" %>
           </div>
           <div class="tab-pane fade" id="v-pills-decrypt" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <%= render "pages/decrypt" %>
+            <%= render "online_pgp_tool/decrypt" %>
           </div>
         </div>
       </div>
-      <%= render "layouts/footer" %>
+      <%= render "online_pgp_tool/footer" %>
     </div>
   </div>
 </div>

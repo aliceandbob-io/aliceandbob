@@ -1,61 +1,103 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "bootstrap-custom";
+$my-primary: #e5e619;
 
 body {
   font-family: 'Roboto mono', sans-serif;
+  p {
+    font-weight: 300;
+  }
 }
 
-/* Overlay to be implemented
-#overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
+.full-background {
+  background: linear-gradient(
+    30deg,
+    /* 1st line */
+    rgba(255,255,255,0) 15%,
+    rgba(255,70,139,0.7) 15%,
+    rgba(255,70,139,0.7) 30%,
+    rgba(255,255,255,0) 30%,
+    /* 2nd line */
+    rgba(255,255,255,0) 50%,
+    rgba(255,70,139,1) 50%,
+    rgba(255,70,139,1) 60%,
+    rgba(255,255,255,0) 60%,
+    /* 3rd line */
+    rgba(255,255,255,0) 80%,
+    rgba(255,70,139,0.7) 80%,
+    rgba(255,70,139,0.7) 85%,
+    rgba(255,255,255,0) 85%);
 }
-*/
+
+.highlight {
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 100%;
+  background-image: linear-gradient(120deg, rgba(0, 227, 255, 0.7) 0%, rgba(0, 227, 255, 0.7) 100%);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: black !important;
+}
+
+.navbar-brand {
+  margin-right: 0px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5em;
+  &:hover {
+    color: $my-primary !important;
+  }
+  .shift {
+    font-size: 0.7em;
+    &:nth-last-of-type(-n+2) {
+      bottom: -3px;
+      position: relative;
+      left: -8px;
+    }
+    &:last-of-type {
+      left: -16px;
+    }
+  }
+}
+
+.navbar {
+  >div {
+    display: inline-flex;
+  }
+  .nav-link {
+    color: gray;
+    &:hover {
+      color: $my-primary;
+    }
+  }
+}
+
+.form-control, .form-control:focus, .form-control:hover {
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  border: 1px solid transparent;
+  text-overflow: ellipsis;
+  box-shadow: none;
+  &:focus, &:hover {
+    border: 1px solid white;
+  }
+}
+
+.input-group-text {
+  background-color: rgba(0,0,0,0.2);
+  color: grey;
+  border: none;
+  box-shadow: none;
+}
+
+.input-group-append > a {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #content {
   display: flex;
   flex-direction: row;
-  #main {
-    flex: 1;
-    #page {
-      min-height: calc(100vh - 62px - 16px - 60px - 75px - 48px - 50px); //100vh - header - header margin - bmc - section - footer dot - footer margin
-    }
-    footer {
-      margin-top: 50px;
-      .bmc-btn {
-        height: 45px !important;
-        margin-bottom: 15px;
-        font-size: 1.2rem !important;
-        min-width: inherit !important;
-      }
-      >.section {
-        min-height: 75px;
-        padding: 25px;
-        padding-top: 0px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        >div {
-          flex: 1;
-        }
-        a {
-          color: white;
-        }
-        a:hover {
-          color: $my-primary;
-        }
-      }
-    }
-  }
+  background-color: #202124;
+  color: #fff;
   #nav {
     height: 100vh;
     background-color: black;
@@ -74,6 +116,25 @@ body {
       }
     }
   }
+  #main {
+    flex: 1;
+    #page {
+      min-height: calc(100vh - 62px - 16px - 50px - 100px - 100px); //100vh - header - header margin - footer margin - footer height - footer padding
+    }
+    footer {
+      color: grey;
+      margin-top: 50px;
+      //min-height: 150px;
+      padding: 50px 20px;
+      width: 100%;
+      a {
+        color: gray;
+        &:hover {
+          color: $my-primary;
+        }
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
@@ -83,18 +144,6 @@ body {
     min-height: 100vh;
     #main {
       padding-bottom: 100px;
-      footer {
-        >.section {
-          //min-height: 135px;
-          padding: 15px;
-          display: flex;
-          flex-direction: column-reverse;
-          justify-content: space-between;
-          >div {
-            margin-bottom: 10px;
-          }
-        }
-      }
     }
     #nav {
       z-index: 1;
@@ -108,6 +157,9 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        >a {
+          margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+        }
       }
     }
   }

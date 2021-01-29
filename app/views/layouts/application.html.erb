@@ -13,6 +13,8 @@
     <meta name="twitter:title" content="<%= meta_title %>">
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
 
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
@@ -21,6 +23,9 @@
     <meta property="og:image" content="<%= meta_image %>" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
+
+    <!-- Monetize with Coil -->
+    <meta name="monetization" content="$ilp.uphold.com/jLEF9iF7daZY">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -39,22 +44,6 @@
   </head>
 
   <body>
-    <!-- Overlay to be implement -->
-    <!--
-    <div id="overlay">
-     <div class="text-center">
-       <div class="sk-chase">
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-          <div class="sk-chase-dot"></div>
-        </div>
-      </div>
-    </div>
-    -->
-
     <!-- Main content -->
     <div id="wrap" class="after-load">
       <!-- Handling flash message -->
@@ -68,6 +57,7 @@
           <% end %>
         </div>
       </div>
+      <!-- CONTENT -->
       <%= yield %>
     </div>
   </body>
