@@ -15,8 +15,12 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+// BOOTSTRAP
 require("bootstrap");
+
+// CUSTOM JS
 require("custom/index");
+require("custom/aos");
 
 // FONTAWESOME
 import "@fortawesome/fontawesome-free/js/all";

@@ -1,6 +1,9 @@
 @import 'bootstrap-custom'; // Your "bootstrap-custom.scss" file shall be placed in the same stylesheets folder
 @import 'bootstrap/scss/bootstrap';
 
+// aos
+@import 'aos/dist/aos.css'; 
+
 // Fontawesome import
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
