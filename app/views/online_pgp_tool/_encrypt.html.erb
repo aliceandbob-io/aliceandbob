@@ -1,7 +1,7 @@
 <fieldset data-controller="encrypt" class="mb-5">
   <legend>Encrypt a message</legend>
   <div class="row d-none error bg-danger rounded p-3 mb-4" data-target="encrypt.error">
-    <em>An error has occured. Please verify the submitted data or try again later.</em>
+    <span>An error has occured. Please verify the submitted data or try again later.</span>
   </div>
   <div class="row mb-3">
     <div class="col-lg-6">
@@ -13,7 +13,7 @@
       <div class="custom-textarea" spellcheck="false" contentEditable="true" data-target="encrypt.key"></div>
     </div>
   </div>
-  <button data-action="click->encrypt#encrypt" data-target="encrypt.encryptButton" type="button" class="btn btn-primary btn-lg">
+  <button data-action="click->encrypt#encrypt" data-target="encrypt.encryptButton" type="button" class="btn btn-primary btn-lg" onclick="ga('send', 'event', 'Online pgp tool', 'Encrypt')">
     <span class="mr-3">Encrypt</span>
     <span class="material-icons icon-fix">lock</span>
     <span class="spinner-border icon-fix spinner-border-sm d-none" role="status" aria-hidden="true"></span>

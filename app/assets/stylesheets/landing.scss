@@ -1,0 +1,79 @@
+#logo {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 0.9;
+  .and {
+    position: relative;
+    left: 12px;
+  }
+  .bob {
+    position: relative;
+    left: 30px;
+    top: 5px;
+  }
+  .shift {
+    font-size: 0.8em;
+    position: relative;
+    left: -17px;
+    bottom: -9px;
+  }
+  .io {
+    font-size: 0.8em;
+    position: relative;
+    left: -32px;
+    bottom: -9px;
+    letter-spacing: normal;
+  }
+}
+
+#landing_header {
+  margin-bottom: 50px;
+}
+
+#features, #downloads, #webapp {
+  // tricks for aos
+  overflow: hidden;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+@include media-breakpoint-down(sm) {
+  section {
+    margin-bottom: 100px;
+  }
+  #screenshot {
+    margin-top: 100px;
+  }
+}
+
+.browser-mockup {
+  border-top: 2em solid rgba(230, 230, 230, 0.7);
+  box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 3px 3px 0 0;
+  flex: 1;
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.browser-mockup:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.25em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+#section_footer {
+  padding: 50px 20px;
+}

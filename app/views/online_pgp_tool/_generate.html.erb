@@ -1,7 +1,7 @@
 <fieldset data-controller="keys" class="mb-5">
   <legend>Generate a PGP key pair</legend>
   <div class="row d-none error bg-danger rounded p-3 mb-4" data-target="keys.error">
-    <em>An error has occured. Please verify the submitted data or try again later.</em>
+    <span>An error has occured. Please verify the submitted data or try again later.</span>
   </div>
   <div class="row mb-3">
     <div class="col">
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <button data-action="click->keys#generate" data-target="keys.generateButton" type="submit" class="btn btn-primary btn-lg">
+  <button data-action="click->keys#generate" data-target="keys.generateButton" type="submit" class="btn btn-primary btn-lg" onclick="ga('send', 'event', 'Online pgp tool', 'Generate')">
     <span class="mr-3">Generate</span>
     <span class="material-icons icon-fix">vpn_key</span>
     <span class="spinner-border icon-fix spinner-border-sm d-none" role="status" aria-hidden="true"></span>

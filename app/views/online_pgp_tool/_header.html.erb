@@ -1,0 +1,30 @@
+<nav class="navbar navbar-dark mb-3">
+  <%= link_to root_path, class: 'navbar-brand' do %>
+    <span class="d-block d-sm-none">
+      a<span class="text-primary shift">&</span>b<span class="text-primary shift">.</span><span class="text-primary shift">io</span>
+    </span>
+    <span class="d-none d-sm-block">
+      alice<span class="text-primary shift">and</span>bob<span class="text-primary shift">.</span><span class="text-primary shift">io</span>
+    </span>
+  <% end %>
+  <div>
+      <a href="https://twitter.com/aliceandbob_io" target="_blank" class="nav-link">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a href="https://github.com/aliceandbob-io/aliceandbob" target="_blank" class="nav-link">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+    <% if user_signed_in? %>
+      <%= link_to edit_user_registration_path, class: "nav-link" do %>
+        <i class="fas fa-cog fa-lg"></i>
+      <% end %>
+      <%= link_to destroy_user_session_path, :method => :delete, class: "nav-link" do %>
+        <i class="fas fa-sign-out-alt fa-lg"></i>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, class: "nav-link" do %>
+        <i class="fas fa-sign-in-alt fa-lg"></i>
+      <% end %>
+    <% end %>
+  </div>
+</nav>

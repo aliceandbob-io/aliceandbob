@@ -1,4 +1,4 @@
-meta_title: "Alice and Bob • A free, light and easy to use client-side PGP tool"
-meta_description: "A free, light and easy to use client-side PGP tool. Helps you to generate PGP key pairs with custom params, encrypt and decrypt messages. This user-friendly tool is based on OpenPGP.js, a project which aims to provide an Open Source OpenPGP library in JavaScript."
+meta_title: "Alice and Bob • A free, light and easy to use PGP tool"
+meta_description: "A free, light and easy to use PGP tool. Helps you to generate PGP key pairs with custom params, encrypt and decrypt messages. This user-friendly tool is based on OpenPGP.js, a project which aims to provide an Open Source OpenPGP library in JavaScript."
 meta_image: "social_card.png"
-# twitter_account: "@"
+twitter_account: "@aliceandbob_io"

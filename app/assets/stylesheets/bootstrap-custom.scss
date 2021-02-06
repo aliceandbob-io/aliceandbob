@@ -1,70 +1,10 @@
-$bg-dark: #202124;
-$body-bg: $bg-dark;
-$body-color: #fff;
+//$bg-dark: #202124;
+//$body-bg: $bg-dark;
+//$body-color: #fff;
+//$enable-gradients: true;
 
 $theme-colors: (
-  "primary": #e5e619
+  "primary": #e5e619,
+  "secondary": #FF468B,
+  "info": #00E3FF
 );
-
-$my-primary: #e5e619;
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color: black !important;
-}
-
-.navbar-brand {
-  margin-right: 0px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1.5em;
-  &:hover {
-    color: $my-primary !important;
-  }
-  .shift {
-    font-size: 0.7em;
-    &:nth-last-of-type(-n+2) {
-      bottom: -3px;
-      position: relative;
-      left: -8px;
-    }
-    &:last-of-type {
-      left: -16px;
-    }
-  }
-}
-
-.navbar {
-  >div {
-    display: inline-flex;
-  }
-  .nav-link {
-    fill: gray;
-    color: gray;
-    &:hover {
-    fill: $my-primary;
-    color: $my-primary;
-    }
-  }
-}
-
-.form-control, .form-control:focus, .form-control:hover {
-  background-color: rgba(0,0,0,0.2);
-  color: white;
-  border: 1px solid transparent;
-  text-overflow: ellipsis;
-  box-shadow: none;
-  &:focus, &:hover {
-    border: 1px solid white;
-  }
-}
-
-.input-group-text {
-  background-color: rgba(0,0,0,0.2);
-  color: grey;
-  border: none;
-  box-shadow: none;
-}
-
-.input-group-append > a {
-  text-decoration: none;
-  cursor: pointer;
-}

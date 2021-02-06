@@ -6,4 +6,13 @@ class ApplicationController < ActionController::Base
       { host: 'http://localhost:3000/' }
     end
   end
+
+  def after_sign_out_path_for(resource)
+    online_pgp_tool_path
+  end
+
+  def after_sign_in_path_for(resource)
+    online_pgp_tool_path
+  end
+
 end

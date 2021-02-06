@@ -1,0 +1,20 @@
+<section id="banner" style="overflow: hidden;">
+  <div data-aos="zoom-out-up" data-aos-duration="7000">
+    <h1 class="mb-5"><span class="d-none d-md-inline-block">🔐</span> Free, light and easy to use <span class="highlight">PGP tool</span></h1>
+    <p class="lead">Generate PGP key pairs, encrypt and decrypt messages easily.</p>
+    <p class="lead mb-5">It is free and secure, and it will stay that way.</p>
+  </div>
+
+  <!-- CALL TO ACTION -->
+  <div class="row justify-content-center">
+    <div class="col-md-4" data-aos="zoom-in-up" data-aos-duration="7000">
+      <a href="#downloads" class="btn btn-primary btn-lg rounded p-3" onclick="ga('send', 'event', 'Button', 'Download', 'Button Banner')"><span class="material-icons">get_app</span> Download App</a>
+
+      <p class="mt-4 mb-5">Available for <a href="#downloads" onclick="ga('send', 'event', 'Button', 'Download', 'Linux link Banner')">Linux</a>, <a href="#downloads" onclick="ga('send', 'event', 'Button', 'Download', 'Windows link Banner')">Windows</a> and <a href="#downloads" onclick="ga('send', 'event', 'Button', 'Download', 'MacOs link Banner')">MacOs</a></p>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in-up" data-aos-duration="7000">
+      <%= link_to "Online PGP tool", online_pgp_tool_path, target: "_blank", onclick: "ga('send', 'event', 'Button', 'Online pgp tool', 'Button Banner')",class: "btn btn-outline-primary btn-lg rounded p-3" %>
+      <p class="mt-4">Get started for free!</p>
+    </div>
+  </div>
+</section>

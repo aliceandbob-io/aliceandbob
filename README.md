@@ -1,12 +1,14 @@
-# aliceandbob.io 🔐
+# aliceandbob.io 🌐🔐
 
 A free, light and easy to use client-side tool to generate PGP key pairs, encrypt and decrypt messages.
+
+**⚡ Looking for the Desktop App from aliceandbob.io instead? Go [here](https://aliceandbob.io/) or on its [GitHub's page](https://github.com/aliceandbob-io/aliceandbob-desktop).**
 
 ## Check it out! 🔥
 
 [aliceandbob.io](https://aliceandbob.io/)
 
-<a href="https://aliceandbob.io/"><img src="public/browser-screenshot-1.png" alt="Screenshot1" width="100%"></a>
+<a href="https://aliceandbob.io/"><img src="https://raw.githubusercontent.com/aliceandbob-io/files/main/screenshot-online-pgp-tool.png" alt="Screenshot1" width="100%"></a>
 
 ## Features ✨
 
@@ -40,7 +42,7 @@ When forking and cloning the repo, don't forget to do the following:
 
 ## Do you like this app? ❤️
 
-<a href="https://www.buymeacoffee.com/aliceandbobio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217"/></a>
+<a href="https://www.buymeacoffee.com/aliceandbobio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="35"/></a>
 
 ## License 📄
 
