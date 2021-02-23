@@ -8,23 +8,8 @@ body {
 }
 
 .full-background {
-  background: linear-gradient(
-    30deg,
-    /* 1st line */
-    rgba(255,255,255,0) 15%,
-    rgba(255,70,139,0.7) 15%,
-    rgba(255,70,139,0.7) 30%,
-    rgba(255,255,255,0) 30%,
-    /* 2nd line */
-    rgba(255,255,255,0) 50%,
-    rgba(255,70,139,1) 50%,
-    rgba(255,70,139,1) 60%,
-    rgba(255,255,255,0) 60%,
-    /* 3rd line */
-    rgba(255,255,255,0) 80%,
-    rgba(255,70,139,0.7) 80%,
-    rgba(255,70,139,0.7) 85%,
-    rgba(255,255,255,0) 85%);
+  background: linear-gradient(to bottom right, #343a36 0%, #40343a 10%, #ff468b 80%);
+  background-attachment: fixed;
 }
 
 .highlight {
