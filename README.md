@@ -13,11 +13,8 @@ A free, light and easy to use client-side tool to generate PGP key pairs, encryp
 ## Features ✨
 
 - 🗝️ Generate PGP key pairs
-<img src="https://raw.githubusercontent.com/aliceandbob-io/files/main/features_generate_v2.png" alt="Generate PGP key pairs" width="100%">
 - 🔒 Encrypt messages with the public PGP key of the receiver
-<img src="https://raw.githubusercontent.com/aliceandbob-io/files/main/features_encrypt_v2.png" alt="Generate PGP key pairs" width="100%">
 - 🔓 Decrypt messages with your private PGP key
-<img src="https://raw.githubusercontent.com/aliceandbob-io/files/main/features_decrypt_v2.png" alt="Generate PGP key pairs" width="100%">
 
 ## Tech 🔧
 
