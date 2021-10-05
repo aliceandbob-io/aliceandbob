@@ -88,14 +88,23 @@ export default class extends Controller {
   downloadKey(e) {
     e.preventDefault();
     let type = e.currentTarget.dataset.type;
+    let format = e.currentTarget.dataset.format;
     if (type == "public") {
       const text = this.publicKeyTarget.innerText;
-      download(text, "txt", "A&B - Public Key");
+      if (format == "asc") {
+        download(text, "text/asc", "aliceandbob.io - Public Key.asc");
+      } else {
+        download(text, "text/txt", "aliceandbob.io - Public Key.txt");
+      }
     } else if (type == "private") {
       const text = this.privateKeyTarget.innerText;
-      download(text, "txt", "A&B - Private Key");
+      if (format == "asc") {
+        download(text, "text/asc", "aliceandbob.io - Private Key.asc");
+      } else {
+        download(text, "text/txt", "aliceandbob.io - Private Key.txt");
+      }
     } else {
-      download("Let's hope you didn't have any bad intention by doing so ;)", "txt", "Well try");
+      download("Let's hope you didn't have any bad intention by doing so ;)", "txt", "Well tried");
       this.errorTarget.classList.remove("d-none");
       $([document.documentElement, document.body]).animate({
         scrollTop: 0
