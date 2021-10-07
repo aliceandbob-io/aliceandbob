@@ -2,7 +2,7 @@
 
 A free, light and easy to use client-side tool to generate PGP key pairs, encrypt and decrypt messages.
 
-**⚡ Looking for the Desktop App from aliceandbob.io instead? Go [here](https://aliceandbob.io/) or on its [GitHub's page](https://github.com/aliceandbob-io/aliceandbob-desktop).**
+**⚡ Looking for the desktop app instead? Go [here](https://aliceandbob.io/) or on its [GitHub's page](https://github.com/aliceandbob-io/aliceandbob-desktop).**
 
 ## Check it out! 🔥
 
