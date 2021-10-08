@@ -25,7 +25,7 @@ A free, light and easy to use client-side tool to generate PGP key pairs, encryp
 
 ## Library 📚
 
-OpenPGP.js (v4.10.7), a JavaScript implementation of the OpenPGP protocol. Find out more on [openpgpjs.org](https://openpgpjs.org/).
+OpenPGP.js (v4.10.10), a JavaScript implementation of the OpenPGP protocol. Find out more on [openpgpjs.org](https://openpgpjs.org/).
 
 ## Contributing 🍰
 
