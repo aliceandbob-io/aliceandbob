@@ -1,5 +1,5 @@
 import { Controller } from "stimulus";
-import { generateKey } from "../model/crypto";
+import { generateMyKeys } from "../model/crypto";
 import { download, copy, showPass } from "../model/index";
 
 export default class extends Controller {
@@ -38,11 +38,11 @@ export default class extends Controller {
     const passphraseParams = this.passphraseParamsTarget.value;
     const curveParams = this.curveParamsTarget.value;
 
-    const key = await generateKey(emailParams, passphraseParams, curveParams).catch((err) => { console.error(err); });
+    const key = await generateMyKeys(emailParams, passphraseParams, curveParams).catch((err) => { console.error(err); });
 
     if (key) {
-      this.privateKeyTarget.innerText = key.privateKeyArmored;
-      this.publicKeyTarget.innerText = key.publicKeyArmored;
+      this.privateKeyTarget.innerText = key.privateKey;
+      this.publicKeyTarget.innerText = key.publicKey;
       this.initialStateTarget.classList.remove("d-none");
       this.errorTarget.classList.add("d-none");
       $([document.documentElement, document.body]).animate({
