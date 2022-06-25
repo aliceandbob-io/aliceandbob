@@ -25,7 +25,10 @@
       </div>
       <div class="form-group mb-3">
         <label>Curve encryption</label>
-        <div class="mb-2"><small class="text-muted">Choose the type of encryption for your key pair.</small></div>
+        <div class="mb-2">
+          <div><small class="text-muted">Choose the type of encryption for your key pair.</small></div>
+          <div><small class="text-muted">Brainpool and secp256k1 curves are no longer supported. <a href="https://github.com/openpgpjs/openpgpjs/pull/1395" target="_blank">See more</a></small></div>
+        </div>
         <select class="form-control" data-target="keys.curveParams">
           <option value="curve25519">curve25519</option>
           <option value="ed25519">ed25519</option>
