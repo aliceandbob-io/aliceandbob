@@ -27,4 +27,4 @@ import "@fortawesome/fontawesome-free/js/all";
 FontAwesome.config.mutateApproach = 'sync'
 
 // STIMULUS IMPORT
-import('controllers')
+import('controllers');

@@ -3,9 +3,6 @@
   <div class="row d-none error bg-danger rounded p-3 mb-4" data-target="keys.error">
     <span>An error has occured. Please verify the submitted data or try again later.</span>
   </div>
-  <div class="row warning bg-warning text-dark rounded p-3 mb-4">
-    <span>This tool will soon migrate to a new version of openPGP.js: the <kbd>brainpool</kbd> and <kbd>secp256k1</kbd> curves will no longer be supported for key generation, encryption and decryption.</span>
-  </div>
   <div class="row mb-3">
     <div class="col">
       <div class="form-group mb-3">
@@ -28,17 +25,24 @@
       </div>
       <div class="form-group mb-3">
         <label>Curve encryption</label>
-        <div class="mb-2"><small class="text-muted">Choose the type of encryption for your key pair.</small></div>
+        <div class="mb-2">
+          <div><small class="text-muted">Choose the type of encryption for your key pair.</small></div>
+          <div><small class="text-muted">Brainpool and secp256k1 curves are no longer supported. <a href="https://github.com/openpgpjs/openpgpjs/pull/1395" target="_blank">See more</a></small></div>
+        </div>
         <select class="form-control" data-target="keys.curveParams">
           <option value="curve25519">curve25519</option>
           <option value="ed25519">ed25519</option>
           <option value="p256">p256</option>
           <option value="p384">p384</option>
           <option value="p521">p521</option>
-          <option value="brainpoolP256r1">brainpoolP256r1</option>
-          <option value="brainpoolP384r1">brainpoolP384r1</option>
-          <option value="brainpoolP512r1">brainpoolP512r1</option>
-          <option value="secp256k1">secp256k1</option>
+          <!-- Curves deprecated with openpgp.js v.5.0.0 -->
+          <!-- See https://github.com/openpgpjs/openpgpjs/pull/1395 -->
+          <!--
+            <option value="brainpoolP256r1">brainpoolP256r1</option>
+            <option value="brainpoolP384r1">brainpoolP384r1</option>
+            <option value="brainpoolP512r1">brainpoolP512r1</option>
+            <option value="secp256k1">secp256k1</option>
+          -->
         </select>
       </div>
     </div>
