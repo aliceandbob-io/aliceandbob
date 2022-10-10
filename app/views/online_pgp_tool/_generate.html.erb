@@ -9,6 +9,7 @@
         <label>Email</label>
         <input type="email" class="form-control" data-target="keys.emailParams" placeholder="email@example.com" value="<%= @email %>">
       </div>
+      <!-- Make Passphrase optional
       <div class="form-group mb-3">
         <label>Passphrase</label>
         <div class="mb-2"><small class="text-muted">There is no way to recover your passphrase so be sure not to forget it.</small></div>
@@ -22,7 +23,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="form-group mb-3">
         <label>Curve encryption</label>
         <div class="mb-2">
@@ -45,6 +46,22 @@
           -->
         </select>
       </div>
+      <!-- Make passphrase optional -->
+      <div class="form-group mb-3">
+        <label>Passphrase <small>(optional)</small></label>
+        <div class="mb-2"><small class="text-muted">There is no way to recover your passphrase so be sure not to forget it.</small></div>
+        <div class="input-group">
+          <input type="password" class="form-control" data-target="keys.passphraseParams" placeholder="Leave blank if you don't want to encrypt your private key">
+          <div class="input-group-append" data-action="click->keys#showPassphrase">
+            <a class="input-group-text">
+              <span class="material-icons">
+                visibility_off
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <button data-action="click->keys#generate" data-target="keys.generateButton" type="submit" class="btn btn-primary btn-lg" onclick="ga('send', 'event', 'Online pgp tool', 'Generate')">
