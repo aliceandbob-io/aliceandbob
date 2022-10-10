@@ -10,7 +10,6 @@ export default class extends Controller {
     e.preventDefault();
     this.initialStateTarget.classList.add("d-none");
     this.emailParamsTarget.classList.remove("border-danger");
-    this.passphraseParamsTarget.classList.remove("border-danger");
     this.curveParamsTarget.classList.remove("border-danger");
     this.errorTarget.classList.add("d-none");
 
@@ -18,13 +17,10 @@ export default class extends Controller {
     if (this.emailParamsTarget.value == "") {
       this.emailParamsTarget.classList.add("border-danger");
     }
-    if (this.passphraseParamsTarget.value == "") {
-      this.passphraseParamsTarget.classList.add("border-danger");
-    }
     if (this.curveParamsTarget.value == "") {
       this.curveParamsTarget.classList.add("border-danger");
     }
-    if (this.emailParamsTarget.value == "" || this.passphraseParamsTarget.value == "" || this.curveParamsTarget.value == "") {
+    if (this.emailParamsTarget.value == "" || this.curveParamsTarget.value == "") {
       return
     }
 

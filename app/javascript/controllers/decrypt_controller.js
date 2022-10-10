@@ -10,7 +10,6 @@ export default class extends Controller {
     this.initialStateTarget.classList.add("d-none");
     this.inputTarget.classList.remove("border-danger");
     this.keyTarget.classList.remove("border-danger");
-    this.passphraseTarget.classList.remove("border-danger");
     this.errorTarget.classList.add("d-none");
 
     // Get message and key
@@ -25,10 +24,7 @@ export default class extends Controller {
     if (this.keyTarget.textContent == "") {
       this.keyTarget.classList.add("border-danger");
     }
-    if (this.passphraseTarget.value == "") {
-      this.passphraseTarget.classList.add("border-danger");
-    }
-    if (this.keyTarget.textContent == "" || this.inputTarget.textContent == "" || this.passphraseTarget.value == "") {
+    if (this.keyTarget.textContent == "" || this.inputTarget.textContent == "") {
       return
     }
 

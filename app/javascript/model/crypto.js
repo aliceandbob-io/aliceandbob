@@ -34,7 +34,13 @@ export async function encryptText(text, armoredKeys) {
 
 export async function decryptText(armoredMessage, armoredKey, passphrase) {
   const privateKey = await readPrivateKey({ armoredKey });
-  const decryptedPrivateKey = await decryptKey({ privateKey, passphrase });
+  const decryptedPrivateKey = await decryptKey({ privateKey, passphrase }).catch((err) => {
+    if (err == "Error: Error decrypting private key: Key packet is already decrypted.") {
+      return privateKey;
+    } else {
+      throw err;
+    }
+  });
 
   const { data: decrypted } = await decrypt({
       message: await readMessage({ armoredMessage }),
